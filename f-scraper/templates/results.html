@@ -1,0 +1,40 @@
+{%  extends 'layout.html' %}
+{% block body %}
+     <h4>Free Proxy List Scraper</h4>
+     <hr class = "my-4"/>
+     <table id = "proxy-table" class = "display table responsive text-left mt-4" style = "width : 100%">
+      <thead>
+       <tr>
+        <th>Id</th> 
+        <th>Brand</th> 
+        <th>Title</th> 
+        <th>Photo Url</th> 
+        <th>Ingredients</th> 
+
+       </tr> 
+      </thead>
+      <tbody>
+        {% for row in data %}
+          <tr>
+            {{row[0]}}
+          </tr>  
+        {% endfor %}
+       
+      </tbody>    
+     </table> 
+     
+     <hr class = "my-4">
+     <a href = "/download" class = "btn btn-primary"> Download </a>
+     
+    <script type="text/javascript">
+    $(document).ready( function() {
+      $('#proxy-table').DataTable();
+     });
+    </script> 
+          
+{% endblock %}
+
+
+
+
+

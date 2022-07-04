@@ -1,0 +1,19 @@
+<html>
+<head>
+
+<!--jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+<script type = "text/javascript" >
+  $.post('http://127.0.0.1:5000/api/post', {
+    'Date' : new Date,
+    'Url' : window.location.href
+  
+  }); 
+
+</script>
+
+</body>
+</html>
